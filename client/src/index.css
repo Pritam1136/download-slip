@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .loadingText {
+    @apply pt-10 text-center text-3xl text-indigo-600;
+  }
+  .inputFeild {
+    @apply block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm outline-none ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6;
+  }
+  .container {
+    @apply sm:mx-auto sm:w-full sm:max-w-sm;
+  }
+  .buttonDesign {
+    @apply flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600;
+  }
+  .tableData {
+    @apply border-t border-gray-300 px-4 py-2 text-center text-sm font-extralight text-gray-700 transition-colors duration-300; /* Added transition */
+  }
+  .tableHead {
+    @apply px-4 py-2 text-center text-base font-black;
+  }
+  .optionStyles {
+    @apply rounded-xl border-none transition-colors duration-300 focus:outline-none; /* Added transition */
+  }
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+body {
+  font-family: "poppins sans-sarif";
+  background-color: #f3eafb;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.backgroundSVG {
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='107' height='107' viewBox='0 0 200 200'%3E%3Cpolygon fill='%23DCEFFA' fill-opacity='0.68' points='100 0 0 100 100 100 100 200 200 100 200 0'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  animation: moveBackground 100s linear infinite;
+}
+
+.inputFeild::placeholder {
+  padding-left: 5px;
+}
+
+/* Custom scrollbar styles */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Dark theme */
+.dark body,
+.dark .tableHead {
+  background-color: #1b1b1d;
+  color: #e2dfdc;
+}
+
+.dark .heading {
+  color: #e2dfdc;
+}
+
+.dark .mainHeader,
+.dark .sidebar {
+  background-color: #282a36;
+}
+
+.dark .tableData,
+.dark .sidebarOptions,
+.dark .optionStyles,
+.dark .profile {
+  background-color: #282a36;
+  color: #e2dfdc;
+}
+
+.dark .profileMenu:hover {
+  background-color: #333333;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background: #a651eb;
+}
