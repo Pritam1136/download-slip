@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { url } from "./URL";
 import Header from "./Components/Header";
 import TextSpinnerLoader from "./Components/TextSpinner/TextSpinner";
-import LogoutButton from "./utility/Logout";
 import DataTable from "./Components/DataTable";
+import LogoutButton from "./utility/Logout";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

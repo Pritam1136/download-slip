@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { url } from "../URL";
-import TextSpinnerLoader from "../components/TextSpinner/TextSpinner";
+import TextSpinnerLoader from "../Components/TextSpinner/TextSpinner";
 
 function Login() {
   const [email, setEmail] = useState("");
